@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap");
+
+:root {
+  --classic-bg: #0b0f16;
+  --classic-bg-2: #0a0e14;
+  --classic-ink: #f3efe4;
+  --classic-muted: #c6bca9;
+  --classic-line: rgba(243, 239, 228, 0.12);
+  --classic-accent: #d6a75c;
+  --classic-accent-2: #6fb4c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  color: var(--classic-ink);
+  line-height: 1.65;
+  letter-spacing: 0.2px;
+  background: radial-gradient(circle at 18% 12%, rgba(214, 167, 92, 0.2), transparent 40%),
+    radial-gradient(circle at 82% 88%, rgba(111, 180, 199, 0.2), transparent 40%),
+    linear-gradient(140deg, var(--classic-bg), var(--classic-bg-2));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--classic-ink);
+}
+
+p {
+  color: var(--classic-muted);
+  font-size: 17px;
+}
+
+a {
+  color: var(--classic-accent-2);
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--classic-accent);
+  text-shadow: 0 0 10px rgba(214, 167, 92, 0.35);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--classic-line);
+  margin: 24px 0;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: "Source Sans 3", system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(214, 167, 92, 0.3);
+  color: var(--classic-ink);
+}
+
+main,
+header,
+section {
+  width: min(1100px, 100%);
+}
+
+@media (max-width: 720px) {
+  body {
+    letter-spacing: 0.1px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}

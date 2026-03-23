@@ -1,0 +1,101 @@
+body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 40px 6vw;
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background: radial-gradient(
+            circle at 15% 20%,
+            rgba(214, 167, 92, 0.25),
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at 85% 80%,
+            rgba(95, 195, 228, 0.22),
+            transparent 45%
+          ),
+          linear-gradient(140deg, var(--bg), var(--bg-2));
+      }
+
+      .card {
+        width: min(900px, 100%);
+        padding: 36px;
+        border-radius: 28px;
+        border: 1px solid rgba(247, 243, 234, 0.12);
+        background: rgba(12, 18, 30, 0.7);
+        box-shadow: var(--glow);
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(32px, 5vw, 52px);
+        letter-spacing: 1.5px;
+      }
+
+      p {
+        margin: 0 0 26px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #0b0f16;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        background: linear-gradient(120deg, var(--accent), #f1d28b);
+        box-shadow: 0 14px 30px rgba(214, 167, 92, 0.35);
+        border: 1px solid rgba(214, 167, 92, 0.6);
+        transition: transform 0.2s ease, box-shadow 0.2s ease,
+          filter 0.2s ease;
+      }
+
+      .btn-back::before {
+        content: "←";
+        font-size: 18px;
+      }
+
+      .btn-back:hover,
+      .btn-back:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 45px rgba(214, 167, 92, 0.45);
+        filter: brightness(1.05);
+      }
+
+      .btn-forward {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        color: #0b0f16;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        background: linear-gradient(120deg, #5fc3e4, #9ad1ff);
+        box-shadow: 0 14px 30px rgba(95, 195, 228, 0.35);
+        border: 1px solid rgba(95, 195, 228, 0.6);
+        transition: transform 0.2s ease, box-shadow 0.2s ease,
+          filter 0.2s ease;
+      }
+
+      .btn-forward::after {
+        content: "→";
+        font-size: 18px;
+      }
+
+      .btn-forward:hover,
+      .btn-forward:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 45px rgba(95, 195, 228, 0.45);
+        filter: brightness(1.05);
+      }
